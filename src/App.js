@@ -38,9 +38,8 @@ const styles = theme => ({
     maxWidth: '300 px',
   },
   details:{
-    justify: 'center',
-    textAlign: 'center',
-    marginLeft: '30%',
+    justifyContent: 'center',
+    direction: 'row'
   },
 });
 
@@ -71,8 +70,8 @@ class App extends React.Component {
         <br/>
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography className={classes.heading}>First Host Site</Typography>
-            <Typography className={classes.secondaryHeading}>Host Site Address</Typography>
+            <Typography className={classes.heading}>Ace's Bougie Grocery Store</Typography>
+            <Typography className={classes.secondaryHeading}>123 Fake Street, Minneapolis</Typography>
           </AccordionSummary>
           <AccordionActions>
             <Button variant='contained'>
@@ -105,8 +104,8 @@ class App extends React.Component {
                 <AccordionDetails>
                     <Accordion>
                       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography className={classes.heading}>First Device Name</Typography>
-                        <Typography className={classes.secondaryHeading}>First Device Type</Typography>
+                        <Typography className={classes.heading}>Back Parking lot Left Charger</Typography>
+                        <Typography className={classes.secondaryHeading}>Dual Head Pedestal</Typography>
                       </AccordionSummary>
                       <AccordionActions>
                         <Button variant='contained'>
@@ -127,16 +126,16 @@ class App extends React.Component {
                           <EditIcon/>Edit Serial Number
                         </Button>
                       </AccordionActions>
-                      <AccordionDetails>
+                      <AccordionDetails className = {classes.details}>
                         Serial Number : MN010-43253-164w
                       </AccordionDetails>
                       <Divider/>
-                      <AccordionActions>
+                      <AccordionActions >
                         <Button variant='contained'>
                           <EditIcon/>Edit Name or Date
                         </Button>
                       </AccordionActions>
-                      <AccordionDetails>
+                      <AccordionDetails className = {classes.details}>
                         Name: Back Parking lot Left Charger
                         <br/>
                         Installation Date: 9/1/2020
@@ -146,8 +145,8 @@ class App extends React.Component {
                   <AccordionDetails>
                     <Accordion>
                       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography className={classes.heading}>Device 2</Typography>
-                        <Typography className={classes.secondaryHeading}>Device Info</Typography>
+                        <Typography className={classes.heading}>Second Device Name</Typography>
+                        <Typography className={classes.secondaryHeading}>Second Device Type</Typography>
                       </AccordionSummary>
                       <AccordionActions>
                         <Button variant='contained'>
@@ -155,6 +154,9 @@ class App extends React.Component {
                         </Button>
                       </AccordionActions>
                       <AccordionDetails>
+                        <img className = {classes.deviceImage} 
+                          src = 'https://images.squarespace-cdn.com/content/v1/5a452989f6576e04a03298a3/1546871836465-V20JWTTE53CGRY0IDWKJ/ke17ZwdGBToddI8pDm48kCt9awVbelElqJMHRaaRJp97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UU4G2p1hy_eRrLVSvZqYrujvXWdLAlapTAj4CtD__Nuogw70n2sEakuJ3CMJig9qhg/ZEFEnergy-ZEFNET-Wallmount_7.7kW-555.jpg?format=1000w'
+                          alt = 'single head wallmount charger'/>
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -170,6 +172,11 @@ class App extends React.Component {
                 <Typography className={classes.heading}>Breaker 1</Typography>
                 <Typography className={classes.secondaryHeading}>Breaker Info</Typography>
                 </AccordionSummary>
+                <AccordionActions>
+                        <Button variant='contained'>
+                          <EditIcon/>Edit Breaker
+                        </Button>
+                      </AccordionActions>
                 <AccordionDetails>
                     <Accordion>
                       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -193,24 +200,21 @@ class App extends React.Component {
                         <Typography className={classes.heading}>Device 2</Typography>
                         <Typography className={classes.secondaryHeading}>Device Info</Typography>
                       </AccordionSummary>
+                      <AccordionActions>
+                        <Button variant='contained'>
+                          <EditIcon/>Edit Device
+                        </Button>
+                      </AccordionActions>
                       <AccordionDetails>
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                       </AccordionDetails>
-                      <AccordionActions>
-                        <Button variant='contained'>
-                          <EditIcon/>Edit Device
-                        </Button>
-                      </AccordionActions>
+                     
                     </Accordion>
                 </AccordionDetails>
-                <AccordionActions>
-                        <Button variant='contained'>
-                          <EditIcon/>Edit Breaker
-                        </Button>
-                      </AccordionActions>
+                
               </Accordion>  
           </AccordionDetails>
         </Accordion>
@@ -230,18 +234,18 @@ class App extends React.Component {
                 <AccordionDetails>
                     <Accordion>
                       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                        <Typography className={classes.heading}>Device 1</Typography>
-                        <Typography className={classes.secondaryHeading}>Device Info</Typography>
+                        <Typography className={classes.heading}>First Device Name</Typography>
+                        <Typography className={classes.secondaryHeading}>First Device Type</Typography>
                       </AccordionSummary>
-                      <AccordionDetails>
-                        The rest of the information about this device. Lorem Ipsem Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
-                         eros, vitae egestas augue. Duis vel est augue.
-                      </AccordionDetails>
                       <AccordionActions>
                         <Button variant='contained'>
                           <EditIcon/>Edit Device
                         </Button>
                       </AccordionActions>
+                      <AccordionDetails>
+                        The rest of the information about this device. Lorem Ipsem Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas
+                         eros, vitae egestas augue. Duis vel est augue.
+                      </AccordionDetails>
                     </Accordion>
                     </AccordionDetails>
                     <AccordionDetails>
